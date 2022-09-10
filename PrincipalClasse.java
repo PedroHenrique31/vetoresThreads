@@ -15,7 +15,12 @@ public class PrincipalClasse {
 	private static final int TAMANHO=10;
 
 	public static void main(String[] args) {
-		int[] numeros= {2,3,9,5,7,63,56,98,9,1};
+		// criei essa lista de numeros pra nao ficar digitando.
+		int[] nums= {2,3,9,5,7,63,56,98,91,1};
+		
+		int[] numeros=new int[TAMANHO];
+		for(int j=0;j<TAMANHO;j++)
+			numeros[j]=nums[j];
 		int[] numerosOrdenados=new int[TAMANHO];
 		
 		// Printa na tela os numeros.
