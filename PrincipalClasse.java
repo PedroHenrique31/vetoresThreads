@@ -10,23 +10,59 @@ package vetoresThreads;
  * */
 
 public class PrincipalClasse {
+	private static final int TAMANHO=10;
 
 	public static void main(String[] args) {
 		int[] numeros= {2,3,9,5,7,63,56,98,9,1};
+		int[] numerosOrdenados=new int[TAMANHO];
 		
 		System.out.println("numeros: ");
 		for(int num: numeros) {
 			System.out.print(num+" ");
 		}
+		int mediaNumeros=media(numeros),menor=min(numeros),maior=max(numeros);
+		System.out.print("\n"+"Média: "+mediaNumeros);
+		System.out.print(" "+"Maior: "+maior);
+		System.out.print(" "+"Menor: "+menor);
 
 	}
-	int media(int[] numeros) {
-		return 0;
+	static int media(int[] numeros) {
+		int soma=0,media=0,tamanho=1;
+		//tamanho=numeros.length();
+		for (int num:numeros) {
+			soma=soma+num;
+			tamanho++;
+		}
+		media=soma/tamanho;
+		return media;
 	}
-	int min(int[] numeros) {
-		return 0;
+	static int min(int[] numeros) {
+		int minimo=numeros[0];
+		for (int i : numeros) {
+			if(i<minimo) {
+				minimo=i;
+			}
+		}
+		return minimo;
 	}
-	int max(int[] numeros) {
-		return 0;
+	static int max(int[] numeros) {
+		int maximo=numeros[0];
+		for (int i : numeros) {
+			if(i>maximo)
+				maximo=i;
+		}
+		return maximo;
 	}
+	static int[] ordena(int[] numeros) {
+		int [] resposta=new int[TAMANHO];
+		
+		/*
+		 * Algum codigo vai aqui para ordenar o vetor
+		 * */
+		for (int i=0;i<=TAMANHO;i++) {
+			resposta[i]=numeros[i];
+		}
+		return resposta;
+		
+	} //FIM ORDENA
 }
