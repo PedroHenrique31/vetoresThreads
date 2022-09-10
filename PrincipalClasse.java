@@ -78,9 +78,9 @@ public class PrincipalClasse {
 			lista.add(numero);
 		}
 		Collections.sort(lista);
-		System.out.println("lista "+lista);
+	
 		for (int i=0;i<TAMANHO;i++) {
-			resposta[i]=numeros[i];
+			resposta[i]=lista.get(i);
 		}
 		return resposta;
 		
