@@ -1,4 +1,6 @@
 package vetoresThreads;
+import java.util.ArrayList;
+import java.util.Collections;
 /**
  * Autor: Pedro Henrique Carneiro de Araújo RA:22108287
  * Este projeto é uma implementação para aprender o uso de threads em java, nele
@@ -16,14 +18,23 @@ public class PrincipalClasse {
 		int[] numeros= {2,3,9,5,7,63,56,98,9,1};
 		int[] numerosOrdenados=new int[TAMANHO];
 		
+		// Printa na tela os numeros.
 		System.out.println("numeros: ");
 		for(int num: numeros) {
 			System.out.print(num+" ");
 		}
+		//Processa os numeros calculando média,maximo,minimo
 		int mediaNumeros=media(numeros),menor=min(numeros),maior=max(numeros);
 		System.out.print("\n"+"Média: "+mediaNumeros);
 		System.out.print(" "+"Maior: "+maior);
 		System.out.print(" "+"Menor: "+menor);
+		
+		//Printa na tela os numeros ordenados
+		numerosOrdenados=ordena(numeros);
+		System.out.println("\n"+"numeros ordenados: ");
+		for(int num: numerosOrdenados) {
+			System.out.print(num+" ");
+		}
 
 	}
 	static int media(int[] numeros) {
@@ -55,11 +66,20 @@ public class PrincipalClasse {
 	}
 	static int[] ordena(int[] numeros) {
 		int [] resposta=new int[TAMANHO];
-		
+		ArrayList<Integer> lista=new ArrayList(TAMANHO);
+		Integer numero=0; // um wrapper de int pra poderusar em ArrayList.
 		/*
 		 * Algum codigo vai aqui para ordenar o vetor
+		 * Tentarei passar o vetor para um Array e usar o sort
+		 * Então passarei o Array para resposta
 		 * */
-		for (int i=0;i<=TAMANHO;i++) {
+		for (int i=0;i<TAMANHO;i++) {
+			numero=numeros[i];
+			lista.add(numero);
+		}
+		Collections.sort(lista);
+		System.out.println("lista "+lista);
+		for (int i=0;i<TAMANHO;i++) {
 			resposta[i]=numeros[i];
 		}
 		return resposta;
