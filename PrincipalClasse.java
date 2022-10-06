@@ -18,18 +18,23 @@ public class PrincipalClasse {
 		// criei essa lista de numeros pra nao ficar digitando.
 		int[] nums= {2,3,9,5,7,63,56,98,91,1};
 		
+		//Atribui os valores de nums em numeros.
 		int[] numeros=new int[TAMANHO];
 		for(int j=0;j<TAMANHO;j++)
 			numeros[j]=nums[j];
-		int[] numerosOrdenados=new int[TAMANHO];
+		int[] numerosOrdenados=new int[TAMANHO];// cria um vetor para os numeros ordenados
 		
 		// Printa na tela os numeros.
 		System.out.println("numeros: ");
 		for(int num: numeros) {
 			System.out.print(num+" ");
 		}
+		
 		//Processa os numeros calculando média,maximo,minimo
-		int mediaNumeros=media(numeros),menor=min(numeros),maior=max(numeros);
+		int mediaNumeros,menor,maior;
+		mediaNumeros=media(numeros);
+		menor=min(numeros);
+		maior=max(numeros);
 		System.out.print("\n"+"Média: "+mediaNumeros);
 		System.out.print(" "+"Maior: "+maior);
 		System.out.print(" "+"Menor: "+menor);
