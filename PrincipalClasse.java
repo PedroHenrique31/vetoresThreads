@@ -48,7 +48,12 @@ public class PrincipalClasse {
 		
 		System.out.println("\n=======================================================================");
 		System.out.println("Agora vamos comparar com as threads");
-
+		System.out.println("=======================================================================");
+		Funcionalidade maximo,minimo,media,ordena;
+		maximo=new Maximo(numeros,TAMANHO);
+		minimo=new Minimo(numeros,TAMANHO);
+		media=new Media(numeros,TAMANHO);
+		ordena=new Ordenador(numeros,TAMANHO);
 	}
 	static int media(int[] numeros) {
 		int soma=0,media=0,tamanho=1;
