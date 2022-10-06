@@ -45,6 +45,9 @@ public class PrincipalClasse {
 		for(int num: numerosOrdenados) {
 			System.out.print(num+" ");
 		}
+		
+		System.out.println("\n=======================================================================");
+		System.out.println("Agora vamos comparar com as threads");
 
 	}
 	static int media(int[] numeros) {

@@ -6,6 +6,7 @@ package vetoresThreads;
  * */
 public abstract class Funcionalidade extends Thread {
 	protected int[] vetor;
+	protected String nome;
 	public Funcionalidade(int[] numeros,int tamanho) {
 		vetor= new int[tamanho];
 		for(int i=0;i<tamanho;i++) {
